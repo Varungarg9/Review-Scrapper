@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<style>
+.w3-lobster {
+  font-family: "Lobster", serif;
+}
+</style>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <div class="w3-container w3-lobster">
+        <p style="color:black" class="w3-xlarge">Flipkart Product Review Scrapper</p>
+    </div>
+
+    <div class="form">
+        <form action="/review" method="POST">
+            <input type="text" name="content" id="content" placeholder="Enter name of a product..">
+            <button class="button" type="Submit" ><span> Submit </span></button>
+        </form>
+    </div>
+</div>
+{% endblock %}
