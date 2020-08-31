@@ -1,5 +1,6 @@
 # Flipkat Review Scrapper
-Web based application to scrape reviews from Flipkart products using Beautiful Soup.
+Web based application to scrape reviews from Flipkart products using Beautiful Soup.<br>
+*Link to Live Application* [click here!](https://reviewscrapper-active-ostrich-iy.cfapps.io)
 
 # Motivation
 Since its beginning of my Data Science journey, this project was created to learn and implement the concepts of Python, Flask API and Data Selection which is a integral part of Machine Learning Application pipline.
